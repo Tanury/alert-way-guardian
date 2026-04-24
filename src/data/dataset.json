@@ -1,0 +1,2298 @@
+{
+  "kpis": {
+    "total_incidents": 20177,
+    "assault_count": 4065,
+    "female_victims": 10113,
+    "female_pct": 50.1,
+    "safecity_total": 11203
+  },
+  "monthly_trend": {
+    "2022-04": {
+      "assault": 319,
+      "burglary": 315,
+      "fraud": 333,
+      "theft": 321,
+      "vandalism": 376
+    },
+    "2022-05": {
+      "assault": 350,
+      "burglary": 348,
+      "fraud": 336,
+      "theft": 346,
+      "vandalism": 341
+    },
+    "2022-06": {
+      "assault": 332,
+      "burglary": 325,
+      "fraud": 351,
+      "theft": 335,
+      "vandalism": 334
+    },
+    "2022-07": {
+      "assault": 337,
+      "burglary": 326,
+      "fraud": 342,
+      "theft": 340,
+      "vandalism": 342
+    },
+    "2022-08": {
+      "assault": 336,
+      "burglary": 363,
+      "fraud": 332,
+      "theft": 341,
+      "vandalism": 324
+    },
+    "2022-09": {
+      "assault": 339,
+      "burglary": 335,
+      "fraud": 328,
+      "theft": 332,
+      "vandalism": 337
+    },
+    "2022-10": {
+      "assault": 358,
+      "burglary": 335,
+      "fraud": 342,
+      "theft": 335,
+      "vandalism": 330
+    },
+    "2022-11": {
+      "assault": 336,
+      "burglary": 310,
+      "fraud": 340,
+      "theft": 298,
+      "vandalism": 321
+    },
+    "2022-12": {
+      "assault": 321,
+      "burglary": 340,
+      "fraud": 333,
+      "theft": 335,
+      "vandalism": 348
+    },
+    "2023-01": {
+      "assault": 328,
+      "burglary": 353,
+      "fraud": 378,
+      "theft": 334,
+      "vandalism": 360
+    },
+    "2023-02": {
+      "assault": 329,
+      "burglary": 330,
+      "fraud": 303,
+      "theft": 301,
+      "vandalism": 314
+    },
+    "2023-03": {
+      "assault": 371,
+      "burglary": 356,
+      "fraud": 329,
+      "theft": 348,
+      "vandalism": 303
+    },
+    "2023-04": {
+      "assault": 9,
+      "burglary": 11,
+      "fraud": 10,
+      "theft": 6,
+      "vandalism": 6
+    }
+  },
+  "demo_breakdown": [
+    {
+      "Category": "assault",
+      "Demographic": "middle class",
+      "count": 1322
+    },
+    {
+      "Category": "assault",
+      "Demographic": "poor",
+      "count": 1413
+    },
+    {
+      "Category": "assault",
+      "Demographic": "rich",
+      "count": 1330
+    },
+    {
+      "Category": "burglary",
+      "Demographic": "middle class",
+      "count": 1314
+    },
+    {
+      "Category": "burglary",
+      "Demographic": "poor",
+      "count": 1373
+    },
+    {
+      "Category": "burglary",
+      "Demographic": "rich",
+      "count": 1360
+    },
+    {
+      "Category": "fraud",
+      "Demographic": "middle class",
+      "count": 1310
+    },
+    {
+      "Category": "fraud",
+      "Demographic": "poor",
+      "count": 1403
+    },
+    {
+      "Category": "fraud",
+      "Demographic": "rich",
+      "count": 1344
+    },
+    {
+      "Category": "theft",
+      "Demographic": "middle class",
+      "count": 1360
+    },
+    {
+      "Category": "theft",
+      "Demographic": "poor",
+      "count": 1315
+    },
+    {
+      "Category": "theft",
+      "Demographic": "rich",
+      "count": 1297
+    },
+    {
+      "Category": "vandalism",
+      "Demographic": "middle class",
+      "count": 1357
+    },
+    {
+      "Category": "vandalism",
+      "Demographic": "poor",
+      "count": 1342
+    },
+    {
+      "Category": "vandalism",
+      "Demographic": "rich",
+      "count": 1337
+    }
+  ],
+  "age_distribution": {
+    "<18": 467,
+    "18-25": 3213,
+    "26-35": 4769,
+    "36-50": 6980,
+    "50+": 4748
+  },
+  "weather_category": [
+    {
+      "Weather": "cloudy",
+      "Category": "assault",
+      "count": 1044
+    },
+    {
+      "Weather": "cloudy",
+      "Category": "burglary",
+      "count": 1015
+    },
+    {
+      "Weather": "cloudy",
+      "Category": "fraud",
+      "count": 1055
+    },
+    {
+      "Weather": "cloudy",
+      "Category": "theft",
+      "count": 1005
+    },
+    {
+      "Weather": "cloudy",
+      "Category": "vandalism",
+      "count": 1034
+    },
+    {
+      "Weather": "rainy",
+      "Category": "assault",
+      "count": 989
+    },
+    {
+      "Weather": "rainy",
+      "Category": "burglary",
+      "count": 977
+    },
+    {
+      "Weather": "rainy",
+      "Category": "fraud",
+      "count": 1003
+    },
+    {
+      "Weather": "rainy",
+      "Category": "theft",
+      "count": 1014
+    },
+    {
+      "Weather": "rainy",
+      "Category": "vandalism",
+      "count": 1037
+    },
+    {
+      "Weather": "sunny",
+      "Category": "assault",
+      "count": 1030
+    },
+    {
+      "Weather": "sunny",
+      "Category": "burglary",
+      "count": 1065
+    },
+    {
+      "Weather": "sunny",
+      "Category": "fraud",
+      "count": 1025
+    },
+    {
+      "Weather": "sunny",
+      "Category": "theft",
+      "count": 948
+    },
+    {
+      "Weather": "sunny",
+      "Category": "vandalism",
+      "count": 1033
+    },
+    {
+      "Weather": "windy",
+      "Category": "assault",
+      "count": 1002
+    },
+    {
+      "Weather": "windy",
+      "Category": "burglary",
+      "count": 990
+    },
+    {
+      "Weather": "windy",
+      "Category": "fraud",
+      "count": 974
+    },
+    {
+      "Weather": "windy",
+      "Category": "theft",
+      "count": 1005
+    },
+    {
+      "Weather": "windy",
+      "Category": "vandalism",
+      "count": 932
+    }
+  ],
+  "gender_breakdown": [
+    {
+      "Category": "assault",
+      "Victim Gender": "female",
+      "count": 2071
+    },
+    {
+      "Category": "assault",
+      "Victim Gender": "male",
+      "count": 1994
+    },
+    {
+      "Category": "burglary",
+      "Victim Gender": "female",
+      "count": 2035
+    },
+    {
+      "Category": "burglary",
+      "Victim Gender": "male",
+      "count": 2012
+    },
+    {
+      "Category": "fraud",
+      "Victim Gender": "female",
+      "count": 2044
+    },
+    {
+      "Category": "fraud",
+      "Victim Gender": "male",
+      "count": 2013
+    },
+    {
+      "Category": "theft",
+      "Victim Gender": "female",
+      "count": 2025
+    },
+    {
+      "Category": "theft",
+      "Victim Gender": "male",
+      "count": 1947
+    },
+    {
+      "Category": "vandalism",
+      "Victim Gender": "female",
+      "count": 1938
+    },
+    {
+      "Category": "vandalism",
+      "Victim Gender": "male",
+      "count": 2098
+    }
+  ],
+  "sc_categories": [
+    {
+      "name": "Commenting",
+      "count": 4279
+    },
+    {
+      "name": "Touching /Groping",
+      "count": 3292
+    },
+    {
+      "name": "Catcalls/Whistles",
+      "count": 2654
+    },
+    {
+      "name": "Ogling/Facial Expressions/Staring",
+      "count": 2394
+    },
+    {
+      "name": "Sexual Invites",
+      "count": 1230
+    },
+    {
+      "name": "Others",
+      "count": 1177
+    },
+    {
+      "name": "Stalking",
+      "count": 982
+    },
+    {
+      "name": "Taking pictures",
+      "count": 868
+    },
+    {
+      "name": "Indecent exposure",
+      "count": 695
+    },
+    {
+      "name": "Rape / Sexual Assault",
+      "count": 581
+    },
+    {
+      "name": "Chain Snatching",
+      "count": 459
+    },
+    {
+      "name": "Poor / No Street Lighting",
+      "count": 367
+    }
+  ],
+  "sc_hourly": [
+    {
+      "HOUR": 0,
+      "count": 217
+    },
+    {
+      "HOUR": 1,
+      "count": 534
+    },
+    {
+      "HOUR": 2,
+      "count": 174
+    },
+    {
+      "HOUR": 3,
+      "count": 135
+    },
+    {
+      "HOUR": 4,
+      "count": 151
+    },
+    {
+      "HOUR": 5,
+      "count": 120
+    },
+    {
+      "HOUR": 6,
+      "count": 209
+    },
+    {
+      "HOUR": 7,
+      "count": 207
+    },
+    {
+      "HOUR": 8,
+      "count": 647
+    },
+    {
+      "HOUR": 9,
+      "count": 217
+    },
+    {
+      "HOUR": 10,
+      "count": 394
+    },
+    {
+      "HOUR": 11,
+      "count": 611
+    },
+    {
+      "HOUR": 12,
+      "count": 714
+    },
+    {
+      "HOUR": 13,
+      "count": 1635
+    },
+    {
+      "HOUR": 14,
+      "count": 611
+    },
+    {
+      "HOUR": 15,
+      "count": 438
+    },
+    {
+      "HOUR": 16,
+      "count": 491
+    },
+    {
+      "HOUR": 17,
+      "count": 975
+    },
+    {
+      "HOUR": 18,
+      "count": 616
+    },
+    {
+      "HOUR": 19,
+      "count": 463
+    },
+    {
+      "HOUR": 20,
+      "count": 387
+    },
+    {
+      "HOUR": 21,
+      "count": 480
+    },
+    {
+      "HOUR": 22,
+      "count": 408
+    },
+    {
+      "HOUR": 23,
+      "count": 369
+    }
+  ],
+  "sc_dow": [
+    {
+      "DAYOFWEEK": "Monday",
+      "count": 1296
+    },
+    {
+      "DAYOFWEEK": "Tuesday",
+      "count": 1374
+    },
+    {
+      "DAYOFWEEK": "Wednesday",
+      "count": 1571
+    },
+    {
+      "DAYOFWEEK": "Thursday",
+      "count": 1388
+    },
+    {
+      "DAYOFWEEK": "Friday",
+      "count": 2340
+    },
+    {
+      "DAYOFWEEK": "Saturday",
+      "count": 1828
+    },
+    {
+      "DAYOFWEEK": "Sunday",
+      "count": 1406
+    }
+  ],
+  "sc_countries": [
+    {
+      "COUNTRY": "India",
+      "count": 8451
+    },
+    {
+      "COUNTRY": "Nepal",
+      "count": 1350
+    },
+    {
+      "COUNTRY": "Kenya",
+      "count": 1328
+    },
+    {
+      "COUNTRY": "United States",
+      "count": 22
+    },
+    {
+      "COUNTRY": "Philippines",
+      "count": 15
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "count": 12
+    },
+    {
+      "COUNTRY": "United Kingdom",
+      "count": 6
+    },
+    {
+      "COUNTRY": "Bharat",
+      "count": 3
+    }
+  ],
+  "map_crime": [
+    {
+      "Latitude": -1.4356129366831372,
+      "Longitude": 36.95830941044276,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 17
+    },
+    {
+      "Latitude": -1.4341186,
+      "Longitude": 36.9550574,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.4289600799753814,
+      "Longitude": 36.94211569353753,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 13
+    },
+    {
+      "Latitude": -1.4284162879112274,
+      "Longitude": 36.940631981776534,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 17
+    },
+    {
+      "Latitude": -1.426554503961616,
+      "Longitude": 36.936613711941504,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 27
+    },
+    {
+      "Latitude": -1.426492874042503,
+      "Longitude": 36.93648742249744,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 20
+    },
+    {
+      "Latitude": -1.4231558,
+      "Longitude": 36.9313762,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 15
+    },
+    {
+      "Latitude": -1.4221891,
+      "Longitude": 36.9308424,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 20
+    },
+    {
+      "Latitude": -1.4172718261786548,
+      "Longitude": 36.947769744667255,
+      "Location Name": "Nairobi-Namanga-Athi River Road, Athi River, Machakos, East Kenya, 00519, Kenya",
+      "count": 30
+    },
+    {
+      "Latitude": -1.4131807,
+      "Longitude": 36.8987404,
+      "Location Name": "The Emakoko, Loneview Access Road, Nairobi, Machakos, East Kenya, 00519, Kenya",
+      "count": 15
+    },
+    {
+      "Latitude": -1.4130421764382406,
+      "Longitude": 36.92011689201773,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 27
+    },
+    {
+      "Latitude": -1.4120227,
+      "Longitude": 36.9157282,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 26
+    },
+    {
+      "Latitude": -1.4119074,
+      "Longitude": 36.9154344,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 19
+    },
+    {
+      "Latitude": -1.4110443924305154,
+      "Longitude": 36.94672022765494,
+      "Location Name": "Nairobi-Namanga-Athi River Road, Athi River, Machakos, East Kenya, 00519, Kenya",
+      "count": 24
+    },
+    {
+      "Latitude": -1.41093,
+      "Longitude": 36.9142449,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 27
+    },
+    {
+      "Latitude": -1.4098454,
+      "Longitude": 36.9128059,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 10
+    },
+    {
+      "Latitude": -1.4074232777996991,
+      "Longitude": 36.849537428496106,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 21
+    },
+    {
+      "Latitude": -1.4074202159425429,
+      "Longitude": 36.84898615088759,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 29
+    },
+    {
+      "Latitude": -1.407395958922627,
+      "Longitude": 36.89361922001765,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 16
+    },
+    {
+      "Latitude": -1.4061169,
+      "Longitude": 36.8664908,
+      "Location Name": "Nairobi, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.4057298,
+      "Longitude": 36.8771069,
+      "Location Name": "Baboon Cliffs, islandream Drive, Nairobi, Kenya",
+      "count": 28
+    },
+    {
+      "Latitude": -1.405247052212525,
+      "Longitude": 36.84826218384388,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.404919563847411,
+      "Longitude": 36.88912936243983,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 11
+    },
+    {
+      "Latitude": -1.404751312701157,
+      "Longitude": 36.84837027278773,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 20
+    },
+    {
+      "Latitude": -1.403575796644383,
+      "Longitude": 36.848556571255614,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 25
+    },
+    {
+      "Latitude": -1.403151886544466,
+      "Longitude": 36.89006563523025,
+      "Location Name": "Nairobi, 74416, Kenya",
+      "count": 22
+    },
+    {
+      "Latitude": -1.4025481,
+      "Longitude": 36.870991,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 14
+    },
+    {
+      "Latitude": -1.4013081,
+      "Longitude": 36.869162,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 30
+    },
+    {
+      "Latitude": -1.3997801384648063,
+      "Longitude": 36.84923019570281,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.3997673,
+      "Longitude": 36.8492308,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 26
+    },
+    {
+      "Latitude": -1.3995903,
+      "Longitude": 36.8643665,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.3980541570140927,
+      "Longitude": 36.78496274006505,
+      "Location Name": "Ole Pasha Drive, Nairobi, 00511, Kenya",
+      "count": 25
+    },
+    {
+      "Latitude": -1.3978446959737965,
+      "Longitude": 36.80450754713244,
+      "Location Name": "Nairobi, 00511, Kenya",
+      "count": 19
+    },
+    {
+      "Latitude": -1.397656481624567,
+      "Longitude": 36.89223150392309,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 27
+    },
+    {
+      "Latitude": -1.3972574,
+      "Longitude": 36.8176028,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 29
+    },
+    {
+      "Latitude": -1.3970042,
+      "Longitude": 36.8946878,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 29
+    },
+    {
+      "Latitude": -1.396019361689002,
+      "Longitude": 36.87716559674905,
+      "Location Name": "Nairobi, 74416, Kenya",
+      "count": 17
+    },
+    {
+      "Latitude": -1.3959329,
+      "Longitude": 36.9139481,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 18
+    },
+    {
+      "Latitude": -1.3957479,
+      "Longitude": 36.8769152,
+      "Location Name": "Nairobi, 74416, Kenya",
+      "count": 24
+    },
+    {
+      "Latitude": -1.395625042832389,
+      "Longitude": 36.84507875206325,
+      "Location Name": "Nairobi, Kenya",
+      "count": 20
+    },
+    {
+      "Latitude": -1.3954937286917666,
+      "Longitude": 36.80358168826983,
+      "Location Name": "Nairobi, 00511, Kenya",
+      "count": 14
+    },
+    {
+      "Latitude": -1.39549267244325,
+      "Longitude": 36.78173410052636,
+      "Location Name": "Ole Pasha Drive, Nairobi, 00511, Kenya",
+      "count": 16
+    },
+    {
+      "Latitude": -1.3954511467809911,
+      "Longitude": 36.838806613090526,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 16
+    },
+    {
+      "Latitude": -1.3952909618637477,
+      "Longitude": 36.859287590633706,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 20
+    },
+    {
+      "Latitude": -1.3949243149401025,
+      "Longitude": 36.83870487195477,
+      "Location Name": "Nairobi, Kajiado, Kenya",
+      "count": 12
+    },
+    {
+      "Latitude": -1.3947634820280923,
+      "Longitude": 36.857775066317366,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 28
+    },
+    {
+      "Latitude": -1.3944359211357518,
+      "Longitude": 36.80503253242151,
+      "Location Name": "Nairobi, 00511, Kenya",
+      "count": 23
+    },
+    {
+      "Latitude": -1.3940422,
+      "Longitude": 36.8974347,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 29
+    },
+    {
+      "Latitude": -1.3938846940617904,
+      "Longitude": 36.85489977731666,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 30
+    },
+    {
+      "Latitude": -1.3938392008895824,
+      "Longitude": 36.85476732946045,
+      "Location Name": "Nairobi, 00519, Kenya",
+      "count": 14
+    }
+  ],
+  "map_safecity": [
+    {
+      "LATITUDE": -1.326132,
+      "LONGITUDE": 36.778864,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 10.22443,
+      "LONGITUDE": 76.197774,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Kodungallur",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.749338,
+      "LONGITUDE": 85.321376,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Gongabu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.638337,
+      "LONGITUDE": 77.08954200000001,
+      "CATEGORY": "Chain Snatching, Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.56223,
+      "LONGITUDE": 77.289725,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, Touching /Groping, Indecent exposure, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.289587,
+      "LONGITUDE": 36.759929,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.632895,
+      "LONGITUDE": 77.219555,
+      "CATEGORY": "Commenting, Touching /Groping, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.309621,
+      "LONGITUDE": 36.780345,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 27.719112,
+      "LONGITUDE": 85.31254200000001,
+      "CATEGORY": "Catcalls/Whistles, Stalking, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.246164,
+      "LONGITUDE": 72.85090600000001,
+      "CATEGORY": "Touching /Groping, Chain Snatching, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.647848,
+      "LONGITUDE": 77.211055,
+      "CATEGORY": "Commenting, Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.474388,
+      "LONGITUDE": 77.50399,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Greater Noida",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 24.592923000000003,
+      "LONGITUDE": 72.703075,
+      "CATEGORY": "Others, ",
+      "CITY": "Mount Abu",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Sexual Invites, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 18.968083,
+      "LONGITUDE": 72.808358,
+      "CATEGORY": "Catcalls/Whistles, Stalking, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.567638,
+      "LONGITUDE": 77.20815400000001,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 26.287340000000004,
+      "LONGITUDE": 73.034163,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, Touching /Groping, ",
+      "CITY": "Jodhpur",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.583052,
+      "LONGITUDE": 77.082383,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 40.805915,
+      "LONGITUDE": -73.966073,
+      "CATEGORY": "Catcalls/Whistles, Ogling/Facial Expressions/Staring, Stalking, ",
+      "CITY": "New York",
+      "COUNTRY": "United States"
+    },
+    {
+      "LATITUDE": 28.632862,
+      "LONGITUDE": 77.219542,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Taking pictures, Commenting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313775,
+      "LONGITUDE": 36.789103999999995,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.600091,
+      "LONGITUDE": 77.227042,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313384,
+      "LONGITUDE": 36.781686,
+      "CATEGORY": "Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 27.706613,
+      "LONGITUDE": 85.31552099999999,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Others, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": -1.313718,
+      "LONGITUDE": 36.79094,
+      "CATEGORY": "Sexual Invites, Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.52151,
+      "LONGITUDE": 77.235845,
+      "CATEGORY": "Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.029611,
+      "LONGITUDE": 73.026023,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Navi Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.518385,
+      "LONGITUDE": 77.236923,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Stalking, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.604186,
+      "LONGITUDE": 77.28953800000001,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.564746999999997,
+      "LONGITUDE": 77.288427,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.703047,
+      "LONGITUDE": 77.177298,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.621272,
+      "LONGITUDE": 77.061327,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Touching /Groping, Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.247498,
+      "LONGITUDE": 72.85524000000001,
+      "CATEGORY": "Taking pictures, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.593765,
+      "LONGITUDE": 77.04349300000001,
+      "CATEGORY": "Commenting, Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.650241,
+      "LONGITUDE": 77.16864699999999,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.72,
+      "LONGITUDE": 85.38,
+      "CATEGORY": "Catcalls/Whistles, Touching /Groping, ",
+      "CITY": "Jorpati",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.027731,
+      "LONGITUDE": 72.846245,
+      "CATEGORY": "Stalking, Commenting, Sexual Invites, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.312912,
+      "LONGITUDE": 36.789312,
+      "CATEGORY": "Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 18.989401,
+      "LONGITUDE": 73.11751600000001,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Panvel",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.627816999999997,
+      "LONGITUDE": 77.218959,
+      "CATEGORY": "Commenting, Taking pictures, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.721898,
+      "LONGITUDE": 85.373223,
+      "CATEGORY": "Catcalls/Whistles, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Jorpati",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.133391,
+      "LONGITUDE": 72.864817,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.623308,
+      "LONGITUDE": 77.267921,
+      "CATEGORY": "Catcalls/Whistles, Indecent exposure, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.657081,
+      "LONGITUDE": 85.324122,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Lalitpur",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.635308,
+      "LONGITUDE": 77.22496,
+      "CATEGORY": "Commenting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Touching /Groping, Sexual Invites, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.63212,
+      "LONGITUDE": 85.31620699999999,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Sunakothi",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 18.915082,
+      "LONGITUDE": 72.825183,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Others, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.57678,
+      "LONGITUDE": 77.336903,
+      "CATEGORY": "Commenting, Sexual Invites, ",
+      "CITY": "Noida",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.591959999999997,
+      "LONGITUDE": 77.188775,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, Indecent exposure, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.69152,
+      "LONGITUDE": 85.342049,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Others, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.060065,
+      "LONGITUDE": 72.900283,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Touching /Groping, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.518385,
+      "LONGITUDE": 77.236923,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Commenting, Sexual Invites, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 12.32541,
+      "LONGITUDE": 77.254152,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Malavalli",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 51.593858,
+      "LONGITUDE": -0.107946,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Sexual Invites, ",
+      "CITY": "London",
+      "COUNTRY": "United Kingdom"
+    },
+    {
+      "LATITUDE": 28.626665000000003,
+      "LONGITUDE": 77.05587,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.075984,
+      "LONGITUDE": 72.877656,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.651964000000003,
+      "LONGITUDE": 77.43663199999999,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Ghaziabad",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 25.722691,
+      "LONGITUDE": 73.33788,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Pali Sub-District",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Poor / No Street Lighting, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.122152,
+      "LONGITUDE": 72.890834,
+      "CATEGORY": "Rape / Sexual Assault, Others, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Others, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.66928,
+      "LONGITUDE": 77.296901,
+      "CATEGORY": "Catcalls/Whistles, Ogling/Facial Expressions/Staring, Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Chain Snatching, Commenting, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.593765,
+      "LONGITUDE": 77.04349300000001,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, Sexual Invites, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.613939,
+      "LONGITUDE": 77.20902099999999,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Ogling/Facial Expressions/Staring, Poor / No Street Lighting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 18.52463,
+      "LONGITUDE": 73.84136,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Pune",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.680911,
+      "LONGITUDE": 77.204587,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 25.616676,
+      "LONGITUDE": 85.11361600000001,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Patna",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.716607,
+      "LONGITUDE": 85.348507,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.647848,
+      "LONGITUDE": 77.211055,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.631451,
+      "LONGITUDE": 77.216667,
+      "CATEGORY": "Sexual Invites, Others, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 13.087207,
+      "LONGITUDE": 80.175979,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Chennai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Commenting, Touching /Groping, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.312449,
+      "LONGITUDE": 36.779555,
+      "CATEGORY": "Others, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.552166999999997,
+      "LONGITUDE": 77.207475,
+      "CATEGORY": "Catcalls/Whistles, Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Stalking, Commenting, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 30.733315,
+      "LONGITUDE": 76.779418,
+      "CATEGORY": "Indecent exposure, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.699588,
+      "LONGITUDE": 85.34269499999999,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.547328000000004,
+      "LONGITUDE": 77.192161,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.640234000000003,
+      "LONGITUDE": 85.318145,
+      "CATEGORY": "Commenting, Taking pictures, ",
+      "CITY": "Sunakothi",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 27.7,
+      "LONGITUDE": 85.333333,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 18.920504,
+      "LONGITUDE": 72.83041300000001,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.721898,
+      "LONGITUDE": 85.373223,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Jorpati",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 16.853939999999998,
+      "LONGITUDE": -99.838237,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 12.958676,
+      "LONGITUDE": 77.58658,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Bengaluru",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.637377,
+      "LONGITUDE": 77.24091800000001,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.231832,
+      "LONGITUDE": 85.77499399999999,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Tamando",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.642664,
+      "LONGITUDE": 77.21680400000001,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.292066,
+      "LONGITUDE": 36.821946,
+      "CATEGORY": "Others, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 18.916543,
+      "LONGITUDE": 72.828402,
+      "CATEGORY": "Others, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.687193,
+      "LONGITUDE": 77.210336,
+      "CATEGORY": "Catcalls/Whistles, Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.593924,
+      "LONGITUDE": 77.164334,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.665995,
+      "LONGITUDE": 85.32266800000001,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Lalitpur",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.459269,
+      "LONGITUDE": 77.072419,
+      "CATEGORY": "Taking pictures, ",
+      "CITY": "Gurugram",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Others, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.675555,
+      "LONGITUDE": 85.345924,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.596128000000004,
+      "LONGITUDE": 77.158738,
+      "CATEGORY": "Indecent exposure, Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.56223,
+      "LONGITUDE": 77.289725,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.310738,
+      "LONGITUDE": 36.779322,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 19.105699,
+      "LONGITUDE": 72.810536,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.568814,
+      "LONGITUDE": 77.22056500000001,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.626334000000003,
+      "LONGITUDE": 77.215915,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.587883,
+      "LONGITUDE": 77.170314,
+      "CATEGORY": "Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.721295,
+      "LONGITUDE": 85.292292,
+      "CATEGORY": "Indecent exposure, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.147219,
+      "LONGITUDE": 72.898427,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": null,
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.147219,
+      "LONGITUDE": 72.810536,
+      "CATEGORY": "Commenting, Touching /Groping, ",
+      "CITY": null,
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.317326,
+      "LONGITUDE": 36.799851,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.594402,
+      "LONGITUDE": 77.020462,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Others, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.647848,
+      "LONGITUDE": 77.211055,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.718085,
+      "LONGITUDE": 77.188775,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.695771,
+      "LONGITUDE": 77.206047,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Catcalls/Whistles, Commenting, Stalking, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.592792,
+      "LONGITUDE": 77.051536,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 25.617592,
+      "LONGITUDE": 85.089569,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Patna",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 26.875015,
+      "LONGITUDE": 81.026128,
+      "CATEGORY": "Stalking, Sexual Invites, ",
+      "CITY": "Lucknow",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 27.721917,
+      "LONGITUDE": 85.373287,
+      "CATEGORY": "Catcalls/Whistles, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Jorpati",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.702208,
+      "LONGITUDE": 77.142764,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.721185,
+      "LONGITUDE": 85.332359,
+      "CATEGORY": "Indecent exposure, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.591959999999997,
+      "LONGITUDE": 77.188775,
+      "CATEGORY": "Catcalls/Whistles, Ogling/Facial Expressions/Staring, Touching /Groping, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.635308,
+      "LONGITUDE": 77.22496,
+      "CATEGORY": "Commenting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 21.395747,
+      "LONGITUDE": 76.68871,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Khaknar",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.685436,
+      "LONGITUDE": 77.20658399999999,
+      "CATEGORY": "Stalking, Taking pictures, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.311041,
+      "LONGITUDE": 36.788063,
+      "CATEGORY": "Touching /Groping, Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": -1.327193,
+      "LONGITUDE": 36.779212,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.621272,
+      "LONGITUDE": 77.061327,
+      "CATEGORY": "Catcalls/Whistles, Commenting, Sexual Invites, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.587560999999997,
+      "LONGITUDE": 77.169007,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.647848,
+      "LONGITUDE": 77.211055,
+      "CATEGORY": "Sexual Invites, Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.195473,
+      "LONGITUDE": 72.965249,
+      "CATEGORY": "Commenting, Stalking, ",
+      "CITY": "Thane",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.621272,
+      "LONGITUDE": 77.061327,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.315758,
+      "LONGITUDE": 36.755015,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 3.8667,
+      "LONGITUDE": 11.5167,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.587560999999997,
+      "LONGITUDE": 77.169007,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 12.996709,
+      "LONGITUDE": 77.528177,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Bengaluru",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.3265129999999998,
+      "LONGITUDE": 36.779618,
+      "CATEGORY": "Others, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.51918,
+      "LONGITUDE": 77.21301,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.632244,
+      "LONGITUDE": 77.220724,
+      "CATEGORY": "Catcalls/Whistles, Touching /Groping, Stalking, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.136489,
+      "LONGITUDE": 72.848871,
+      "CATEGORY": "Others, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.229925,
+      "LONGITUDE": 72.85561,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.311485,
+      "LONGITUDE": 36.787947,
+      "CATEGORY": "Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 25.668429,
+      "LONGITUDE": 85.289059,
+      "CATEGORY": "Commenting, Stalking, ",
+      "CITY": "Bidupur",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.635308,
+      "LONGITUDE": 77.22496,
+      "CATEGORY": "Catcalls/Whistles, Touching /Groping, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.687665000000003,
+      "LONGITUDE": 77.211428,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.727839000000003,
+      "LONGITUDE": 85.37820699999999,
+      "CATEGORY": "Commenting, Touching /Groping, Sexual Invites, Others, ",
+      "CITY": "Jorpati",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 18.964237,
+      "LONGITUDE": 72.815021,
+      "CATEGORY": "Stalking, Poor / No Street Lighting, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.719112,
+      "LONGITUDE": 85.31254200000001,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.229925,
+      "LONGITUDE": 72.85561,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Commenting, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.694059000000003,
+      "LONGITUDE": 77.177274,
+      "CATEGORY": "Commenting, Taking pictures, Touching /Groping, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.673373,
+      "LONGITUDE": 77.169674,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.102662,
+      "LONGITUDE": 72.837639,
+      "CATEGORY": "Commenting, Stalking, Taking pictures, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.715617,
+      "LONGITUDE": 85.324376,
+      "CATEGORY": "Taking pictures, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": -1.313305,
+      "LONGITUDE": 36.784644,
+      "CATEGORY": "Sexual Invites, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": -1.311262,
+      "LONGITUDE": 36.776495,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.523190000000003,
+      "LONGITUDE": 77.08179,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.757322,
+      "LONGITUDE": 77.1544,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 12.903621,
+      "LONGITUDE": 77.632848,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Bengaluru",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.635308,
+      "LONGITUDE": 77.22496,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 19.021324,
+      "LONGITUDE": 72.84241800000001,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.59214,
+      "LONGITUDE": 77.046048,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.717245,
+      "LONGITUDE": 85.32396,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 27.711828000000004,
+      "LONGITUDE": 85.337547,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 27.706149,
+      "LONGITUDE": 85.309421,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 19.015063,
+      "LONGITUDE": 72.827799,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 18.97039,
+      "LONGITUDE": 72.804385,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Mumbai",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 27.675555,
+      "LONGITUDE": 85.345924,
+      "CATEGORY": "Stalking, ",
+      "CITY": "Kathmandu",
+      "COUNTRY": "Nepal"
+    },
+    {
+      "LATITUDE": 28.720719,
+      "LONGITUDE": 77.10713299999999,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.312412,
+      "LONGITUDE": 36.790618,
+      "CATEGORY": "Commenting, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    },
+    {
+      "LATITUDE": 28.59214,
+      "LONGITUDE": 77.046048,
+      "CATEGORY": "Rape / Sexual Assault, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.8,
+      "LONGITUDE": 77.0333,
+      "CATEGORY": "Chain Snatching, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 25.612785,
+      "LONGITUDE": 85.121179,
+      "CATEGORY": "Indecent exposure, ",
+      "CITY": "Patna",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.563842,
+      "LONGITUDE": 77.28971700000001,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.50931,
+      "LONGITUDE": 77.230928,
+      "CATEGORY": "Taking pictures, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.632824,
+      "LONGITUDE": 77.218259,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, Touching /Groping, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.635308,
+      "LONGITUDE": 77.22496,
+      "CATEGORY": "Catcalls/Whistles, Commenting, ",
+      "CITY": "New Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Commenting, Ogling/Facial Expressions/Staring, Touching /Groping, Sexual Invites, Rape / Sexual Assault, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Others, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.680911,
+      "LONGITUDE": 77.204587,
+      "CATEGORY": "Commenting, Taking pictures, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.64886,
+      "LONGITUDE": 77.22646,
+      "CATEGORY": "Ogling/Facial Expressions/Staring, Taking pictures, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Catcalls/Whistles, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 4.1666669999999995,
+      "LONGITUDE": 9.233333,
+      "CATEGORY": "Touching /Groping, Sexual Invites, ",
+      "CITY": "Chandigarh",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 28.559406,
+      "LONGITUDE": 77.265548,
+      "CATEGORY": "Catcalls/Whistles, Chain Snatching, Commenting, ",
+      "CITY": "Delhi",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": 20.429047,
+      "LONGITUDE": 80.149403,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Armori",
+      "COUNTRY": "India"
+    },
+    {
+      "LATITUDE": -1.312412,
+      "LONGITUDE": 36.790618,
+      "CATEGORY": "Touching /Groping, ",
+      "CITY": "Nairobi",
+      "COUNTRY": "Kenya"
+    }
+  ],
+  "sc_cities": [
+    {
+      "CITY": "Delhi",
+      "count": 3443
+    },
+    {
+      "CITY": "Mumbai",
+      "count": 1738
+    },
+    {
+      "CITY": "Nairobi",
+      "count": 1326
+    },
+    {
+      "CITY": "Kathmandu",
+      "count": 830
+    },
+    {
+      "CITY": "New Delhi",
+      "count": 694
+    },
+    {
+      "CITY": "Armori",
+      "count": 532
+    },
+    {
+      "CITY": "Chandigarh",
+      "count": 365
+    },
+    {
+      "CITY": "Patna",
+      "count": 169
+    },
+    {
+      "CITY": "Jorpati",
+      "count": 133
+    },
+    {
+      "CITY": "Noida",
+      "count": 101
+    }
+  ]
+}
