@@ -65,14 +65,19 @@ export default function MapVisualization() {
   const [heatmapData,   setHeatmapData]   = useState([]);
   const [zoneData,      setZoneData]      = useState([]);
   const [loading,       setLoading]       = useState(true);
+  const [mapReady,      setMapReady]      = useState(false);
 
   // ── Load data ────────────────────────────────────────────────
   useEffect(() => {
     const safe = (url, setter) =>
       fetch(url)
-        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(r => {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        })
         .then(setter)
-        .catch(err => console.warn('Map fetch failed:', url, err.message));
+        .catch(err =>
+          console.warn('Map fetch failed:', url, err.message));
 
     Promise.all([
       safe(`${API}/sensors/map-points`, setMapPoints),
@@ -93,16 +98,17 @@ export default function MapVisualization() {
         );
         return {
           day, hour: hr,
-          score: match ? Math.round((match.count / maxVal) * 100) : 0,
+          score: match
+            ? Math.round((match.count / maxVal) * 100) : 0,
           count: match?.count || 0,
         };
       })
     );
   }, [heatmapData]);
 
-  // ── Inject Leaflet + init map ────────────────────────────────
+  // ── Inject Leaflet CSS + JS, then init map ───────────────────
   useEffect(() => {
-    // Inject CSS
+    // Inject CSS if not already present
     if (!document.getElementById('leaflet-css')) {
       const link  = document.createElement('link');
       link.id     = 'leaflet-css';
@@ -114,6 +120,14 @@ export default function MapVisualization() {
     const initMap = () => {
       const L = window.L;
       if (!L || mapInstance.current) return;
+
+      // Wait until the container actually has dimensions
+      if (!mapRef.current
+        || mapRef.current.offsetWidth === 0
+        || mapRef.current.offsetHeight === 0) {
+        setTimeout(initMap, 200);
+        return;
+      }
 
       const map = L.map(mapRef.current, {
         center:        [6.93, 79.87],
@@ -130,22 +144,41 @@ export default function MapVisualization() {
       }).addTo(map);
 
       mapInstance.current = map;
-      setTimeout(() => map.invalidateSize(), 500);
+
+      // Multiple invalidateSize calls to guarantee correct rendering
+      setTimeout(() => { map.invalidateSize(); }, 100);
+      setTimeout(() => { map.invalidateSize(); setMapReady(true); }, 600);
+      setTimeout(() => { map.invalidateSize(); }, 1200);
     };
 
     if (window.L) {
-      initMap();
+      // Leaflet already loaded — small delay so React finishes painting
+      setTimeout(initMap, 100);
     } else {
-      const script    = document.createElement('script');
-      script.id       = 'leaflet-js';
-      script.src      = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-      script.async    = true;
-      script.onload   = initMap;
-      document.head.appendChild(script);
+      // Load Leaflet JS dynamically
+      if (!document.getElementById('leaflet-js')) {
+        const script  = document.createElement('script');
+        script.id     = 'leaflet-js';
+        script.src    = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+        script.async  = true;
+        script.onload = () => setTimeout(initMap, 100);
+        document.head.appendChild(script);
+      }
     }
+
+    // Cleanup on unmount
+    return () => {
+      if (mapInstance.current) {
+        mapInstance.current.remove();
+        mapInstance.current = null;
+        dataLayer.current   = null;
+        tileRef.current     = null;
+        setMapReady(false);
+      }
+    };
   }, []);
 
-  // ── Swap tile layer ──────────────────────────────────────────
+  // ── Swap tile layer on style change ─────────────────────────
   useEffect(() => {
     const L = window.L;
     if (!L || !mapInstance.current || !tileRef.current) return;
@@ -156,87 +189,119 @@ export default function MapVisualization() {
     }).addTo(mapInstance.current);
   }, [mapStyle]);
 
-  // ── Render data points whenever points or filters change ─────
+  // ── Render markers — only after map is ready ─────────────────
   useEffect(() => {
     const L = window.L;
-    if (!L || !mapInstance.current || !mapPoints.length) return;
+    if (!L || !mapInstance.current || !mapPoints.length || !mapReady)
+      return;
 
+    // Remove previous layer safely
     if (dataLayer.current) {
-      mapInstance.current.removeLayer(dataLayer.current);
+      try {
+        mapInstance.current.removeLayer(dataLayer.current);
+      } catch (e) {}
+      dataLayer.current = null;
     }
 
-    const filtered = mapPoints.filter(pt => {
-      if (activeLayer === 'emergency' && pt.Emergency_Flag !== 1)
-        return false;
-      if (activeLayer === 'normal'    && pt.Emergency_Flag === 1)
-        return false;
-      if (minSeverity === 'critical'
-        && pt.Severity_Level !== 'Critical') return false;
-      if (minSeverity === 'high'
-        && !['Critical','High'].includes(pt.Severity_Level))
-        return false;
-      return true;
-    });
+    // Force size recalculation before adding markers
+    mapInstance.current.invalidateSize();
 
-    const layer = L.layerGroup();
+    // Delay marker rendering so the container paint is complete
+    const timer = setTimeout(() => {
+      const L = window.L;
+      if (!L || !mapInstance.current) return;
 
-    filtered.forEach(pt => {
-      if (!pt.GPS_Lat || !pt.GPS_Long) return;
-      const isEmg  = pt.Emergency_Flag === 1;
-      const color  = getSeverityColor(pt);
-      const radius = isEmg
-        ? (pt.Severity_Level === 'Critical' ? 11
-          : pt.Severity_Level === 'High' ? 9 : 7)
-        : 5;
+      const filtered = mapPoints.filter(pt => {
+        // Validate GPS coordinates are within Sri Lanka bounds
+        if (!pt.GPS_Lat || !pt.GPS_Long)          return false;
+        if (pt.GPS_Lat  < 5.9  || pt.GPS_Lat  > 9.9)  return false;
+        if (pt.GPS_Long < 79.5 || pt.GPS_Long > 81.9)  return false;
 
-      const marker = L.circleMarker([pt.GPS_Lat, pt.GPS_Long], {
-        radius,
-        fillColor:   color,
-        color:       color,
-        fillOpacity: isEmg ? 0.78 : 0.45,
-        weight:      isEmg ? 1.5  : 0.8,
+        if (activeLayer === 'emergency'
+          && pt.Emergency_Flag !== 1)              return false;
+        if (activeLayer === 'normal'
+          && pt.Emergency_Flag === 1)              return false;
+        if (minSeverity === 'critical'
+          && pt.Severity_Level !== 'Critical')     return false;
+        if (minSeverity === 'high'
+          && !['Critical','High']
+            .includes(pt.Severity_Level))          return false;
+
+        return true;
       });
 
-      if (showLabels) {
-        marker.bindPopup(`
-          <div style="font-family:monospace;font-size:12px;
-            padding:10px 13px;line-height:1.75;min-width:160px">
-            <b style="font-size:13px">${pt.Zone}</b><br/>
-            <span style="color:#4a7080">User:</span>
-              ${pt.User_Type}<br/>
-            <span style="color:#4a7080">Motion:</span>
-              ${pt.Motion_Type}<br/>
-            <span style="color:#4a7080">Time:</span>
-              ${pt.Is_Night ? '🌙 Night' : '☀️ Day'}<br/>
-            ${isEmg
-              ? `<b style="color:#852E47;margin-top:4px;
-                  display:block">
-                  ⚠ ${pt.Severity_Level} Emergency
-                </b>`
-              : ''}
-          </div>
-        `);
-      }
+      const layer = L.layerGroup();
 
-      marker.on('click', () => setDrillInfo({
-        zone:     pt.Zone,
-        user:     pt.User_Type,
-        motion:   pt.Motion_Type,
-        night:    pt.Is_Night,
-        isEmg,
-        severity: pt.Severity_Level,
-        device:   pt.Device_ID,
-        lat:      pt.GPS_Lat?.toFixed(4),
-        lng:      pt.GPS_Long?.toFixed(4),
-      }));
+      filtered.forEach(pt => {
+        try {
+          const isEmg  = pt.Emergency_Flag === 1;
+          const color  = getSeverityColor(pt);
+          const radius = isEmg
+            ? (pt.Severity_Level === 'Critical' ? 11
+              : pt.Severity_Level === 'High' ? 9 : 7)
+            : 5;
 
-      marker.addTo(layer);
-    });
+          const marker = L.circleMarker(
+            [pt.GPS_Lat, pt.GPS_Long],
+            {
+              radius,
+              fillColor:   color,
+              color:       color,
+              fillOpacity: isEmg ? 0.78 : 0.45,
+              weight:      isEmg ? 1.5  : 0.8,
+            }
+          );
 
-    layer.addTo(mapInstance.current);
-    dataLayer.current = layer;
-    mapInstance.current.invalidateSize();
-  }, [mapPoints, activeLayer, minSeverity, showLabels]);
+          if (showLabels) {
+            marker.bindPopup(`
+              <div style="font-family:monospace;font-size:12px;
+                padding:10px 13px;line-height:1.75;min-width:160px">
+                <b style="font-size:13px">${pt.Zone}</b><br/>
+                <span style="color:#4a7080">User:</span>
+                  ${pt.User_Type}<br/>
+                <span style="color:#4a7080">Motion:</span>
+                  ${pt.Motion_Type}<br/>
+                <span style="color:#4a7080">Time:</span>
+                  ${pt.Is_Night ? '🌙 Night' : '☀️ Day'}<br/>
+                ${isEmg
+                  ? `<b style="color:#852E47;margin-top:4px;
+                      display:block">
+                      ⚠ ${pt.Severity_Level} Emergency
+                    </b>`
+                  : ''}
+              </div>
+            `);
+          }
+
+          marker.on('click', () => setDrillInfo({
+            zone:     pt.Zone,
+            user:     pt.User_Type,
+            motion:   pt.Motion_Type,
+            night:    pt.Is_Night,
+            isEmg,
+            severity: pt.Severity_Level,
+            device:   pt.Device_ID,
+            lat:      pt.GPS_Lat?.toFixed(4),
+            lng:      pt.GPS_Long?.toFixed(4),
+          }));
+
+          marker.addTo(layer);
+
+        } catch (e) {
+          // Skip any individual marker that fails — don't crash the whole map
+          console.warn('Skipped bad marker:', e.message);
+        }
+      });
+
+      layer.addTo(mapInstance.current);
+      dataLayer.current = layer;
+      mapInstance.current.invalidateSize();
+
+    }, 300);
+
+    return () => clearTimeout(timer);
+
+  }, [mapPoints, activeLayer, minSeverity, showLabels, mapReady]);
 
   const zoneBarData = [...zoneData]
     .sort((a, b) => b.emergencies - a.emergencies)
@@ -328,9 +393,32 @@ export default function MapVisualization() {
 
               {/* Leaflet map container */}
               <div ref={mapRef} style={{
-                height: 420, width:'100%',
-                zIndex:0, position:'relative',
+                height: 420,
+                width: '100%',
+                zIndex: 0,
+                position: 'relative',
+                background: '#e4eef2',  // placeholder while tiles load
               }} />
+
+              {/* Loading overlay */}
+              {!mapReady && (
+                <div style={{
+                  position: 'absolute',
+                  top: 0, left: 0, right: 0,
+                  height: 420,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(238,244,247,0.7)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: 12,
+                  color: 'var(--text-muted)',
+                  pointerEvents: 'none',
+                  zIndex: 1,
+                }}>
+                  Loading map…
+                </div>
+              )}
 
               {/* Legend */}
               <div style={{
@@ -345,18 +433,20 @@ export default function MapVisualization() {
                   marginRight:4 }}>LEGEND:</span>
                 {[
                   { label:'Critical',       color:'#852E47', r:11 },
-                  { label:'High Emergency', color:'#AA542B', r:9 },
-                  { label:'Medium',         color:'#C2441C', r:7 },
-                  { label:'Violent Motion', color:'#FFC64F', r:5 },
-                  { label:'Normal',         color:'#519CAB', r:5 },
+                  { label:'High Emergency', color:'#AA542B', r:9  },
+                  { label:'Medium',         color:'#C2441C', r:7  },
+                  { label:'Violent Motion', color:'#FFC64F', r:5  },
+                  { label:'Normal',         color:'#519CAB', r:5  },
                 ].map(({ label, color, r }) => (
                   <span key={label}
                     style={{ display:'flex',
                       alignItems:'center', gap:5 }}>
                     <span style={{
-                      width:r*2, height:r*2, borderRadius:'50%',
-                      background:color, display:'inline-block',
-                      opacity:0.85, flexShrink:0,
+                      width: r*2, height: r*2,
+                      borderRadius: '50%',
+                      background: color,
+                      display: 'inline-block',
+                      opacity: 0.85, flexShrink: 0,
                     }} />
                     <span style={{ fontFamily:'var(--font-mono)',
                       fontSize:10,
@@ -382,8 +472,7 @@ export default function MapVisualization() {
                   RISK HEATMAP
                 </span>
               </div>
-              <div className="card-body"
-                style={{ overflowX:'auto' }}>
+              <div className="card-body" style={{ overflowX:'auto' }}>
                 <table className="heatmap-table">
                   <thead>
                     <tr>
@@ -406,17 +495,17 @@ export default function MapVisualization() {
                           const { bg, text } =
                             getHeatColor(cell?.score || 0);
                           const isHl =
-                            heatHighlight?.day===day
-                            && heatHighlight?.hour===hr;
+                            heatHighlight?.day === day
+                            && heatHighlight?.hour === hr;
                           return (
                             <td key={hr}>
                               <div className="heatmap-cell"
                                 style={{
-                                  background:bg, color:text,
+                                  background: bg, color: text,
                                   outline: isHl
                                     ? '2px solid var(--accent-midnight)'
                                     : 'none',
-                                  cursor:'default',
+                                  cursor: 'default',
                                 }}
                                 title={`${day} ${hr}:00 — ${cell?.count||0} emergencies`}
                                 onMouseEnter={() =>
@@ -434,17 +523,20 @@ export default function MapVisualization() {
                 </table>
 
                 {/* Heatmap legend */}
-                <div style={{ display:'flex', gap:10,
-                  marginTop:10, alignItems:'center',
-                  flexWrap:'wrap' }}>
+                <div style={{ display:'flex', gap:10, marginTop:10,
+                  alignItems:'center', flexWrap:'wrap' }}>
                   <span style={{ fontFamily:'var(--font-mono)',
                     fontSize:10,
                     color:'var(--text-muted)' }}>RISK:</span>
                   {[
-                    { label:'Low',      bg:'rgba(81,156,171,0.15)' },
-                    { label:'Moderate', bg:'rgba(255,198,79,0.55)' },
-                    { label:'High',     bg:'rgba(170,84,43,0.68)' },
-                    { label:'Critical', bg:'rgba(133,46,71,0.82)' },
+                    { label:'Low',
+                      bg:'rgba(81,156,171,0.15)' },
+                    { label:'Moderate',
+                      bg:'rgba(255,198,79,0.55)' },
+                    { label:'High',
+                      bg:'rgba(170,84,43,0.68)' },
+                    { label:'Critical',
+                      bg:'rgba(133,46,71,0.82)' },
                   ].map(({ label, bg }) => (
                     <span key={label}
                       style={{ display:'flex',
@@ -459,12 +551,11 @@ export default function MapVisualization() {
                   ))}
                   {heatHighlight && (() => {
                     const cell = heatMatrix.find(
-                      m => m.day===heatHighlight.day
-                        && m.hour===heatHighlight.hour);
+                      m => m.day === heatHighlight.day
+                        && m.hour === heatHighlight.hour);
                     return (
                       <span style={{ marginLeft:'auto',
-                        fontFamily:'var(--font-mono)',
-                        fontSize:11,
+                        fontFamily:'var(--font-mono)', fontSize:11,
                         color:'var(--accent-midnight)',
                         fontWeight:600 }}>
                         {heatHighlight.day} {heatHighlight.hour}:00
@@ -502,23 +593,30 @@ export default function MapVisualization() {
                       gridTemplateColumns:'1fr 1fr',
                       gap:8, marginBottom:12 }}>
                       {[
-                        { label:'User Type', value:drillInfo.user },
-                        { label:'Motion',    value:drillInfo.motion },
+                        { label:'User Type',
+                          value: drillInfo.user },
+                        { label:'Motion',
+                          value: drillInfo.motion },
                         { label:'Time',
-                          value:drillInfo.night
+                          value: drillInfo.night
                             ? '🌙 Night' : '☀️ Day' },
-                        { label:'Device',    value:drillInfo.device },
-                        { label:'Latitude',  value:drillInfo.lat },
-                        { label:'Longitude', value:drillInfo.lng },
+                        { label:'Device',
+                          value: drillInfo.device },
+                        { label:'Latitude',
+                          value: drillInfo.lat },
+                        { label:'Longitude',
+                          value: drillInfo.lng },
                       ].map(({ label, value }) => (
                         <div key={label} style={{
                           background:'var(--bg-hover)',
                           borderRadius:6, padding:'6px 9px',
                         }}>
-                          <div style={{ fontFamily:'var(--font-mono)',
+                          <div style={{
+                            fontFamily:'var(--font-mono)',
                             fontSize:9, color:'var(--text-muted)',
                             textTransform:'uppercase',
-                            letterSpacing:'0.06em' }}>{label}</div>
+                            letterSpacing:'0.06em',
+                          }}>{label}</div>
                           <div style={{ fontSize:12, fontWeight:600,
                             color:'var(--text-primary)',
                             marginTop:2 }}>{value}</div>
@@ -530,7 +628,8 @@ export default function MapVisualization() {
                         borderRadius:8,
                         background:'rgba(133,46,71,0.06)',
                         border:'1px solid rgba(133,46,71,0.18)' }}>
-                        <div style={{ fontFamily:'var(--font-mono)',
+                        <div style={{
+                          fontFamily:'var(--font-mono)',
                           fontSize:10, color:'var(--text-muted)',
                           marginBottom:3 }}>SEVERITY</div>
                         <div style={{
@@ -576,26 +675,21 @@ export default function MapVisualization() {
                   Which Colombo areas need the most attention
                 </div>
               </div>
-              <div className="card-body"
-                style={{ padding:'12px 8px' }}>
+              <div className="card-body" style={{ padding:'12px 8px' }}>
                 <ResponsiveContainer width="100%" height={220}>
-                  <BarChart data={zoneBarData}
-                    layout="vertical"
-                    margin={{ top:0, right:20,
-                      left:10, bottom:0 }}>
+                  <BarChart data={zoneBarData} layout="vertical"
+                    margin={{ top:0, right:20, left:10, bottom:0 }}>
                     <CartesianGrid strokeDasharray="3 3"
                       stroke="var(--border)" />
                     <XAxis type="number" tick={{ fontSize:9 }} />
                     <YAxis dataKey="zone" type="category"
                       tick={{ fontSize:10 }} width={80} />
                     <Tooltip {...TT} />
-                    <Bar dataKey="emergencies"
-                      name="Emergencies"
+                    <Bar dataKey="emergencies" name="Emergencies"
                       radius={[0,3,3,0]}>
                       {zoneBarData.map((_, i) => (
                         <Cell key={i}
-                          fill={ZONE_COLORS[i%ZONE_COLORS.length]}
-                        />
+                          fill={ZONE_COLORS[i%ZONE_COLORS.length]} />
                       ))}
                     </Bar>
                   </BarChart>
@@ -613,11 +707,11 @@ export default function MapVisualization() {
               </div>
               <div className="card-body">
                 {[...zoneData]
-                  .sort((a,b) => b.emergencies - a.emergencies)
+                  .sort((a, b) => b.emergencies - a.emergencies)
                   .slice(0, 5)
                   .map((z, i) => {
                     const rate = z.total
-                      ? ((z.emergencies/z.total)*100).toFixed(1)
+                      ? ((z.emergencies / z.total) * 100).toFixed(1)
                       : 0;
                     return (
                       <div key={z.Zone} className="progress-row">
@@ -625,8 +719,9 @@ export default function MapVisualization() {
                           title={z.Zone}>{z.Zone}</span>
                         <div className="progress-track">
                           <div className="progress-fill" style={{
-                            width:`${rate}%`,
-                            background:ZONE_COLORS[i%ZONE_COLORS.length],
+                            width: `${rate}%`,
+                            background:
+                              ZONE_COLORS[i % ZONE_COLORS.length],
                           }} />
                         </div>
                         <span className="progress-val">
