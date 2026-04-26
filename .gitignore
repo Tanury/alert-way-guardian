@@ -1,3 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
 node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment
 .env
-*.log
+server/.env
+
+# Build output
+client/build/
+
+# OS
+.DS_Store
